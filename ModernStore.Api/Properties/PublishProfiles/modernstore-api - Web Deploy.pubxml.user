@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMyKWNN4ML0+cQgJ2Ym7/lQAAAAACAAAAAAAQZgAAAAEAACAAAADKwwH+/iUxFiq0CF46FYyFQ6SL4yhUA6Y1nEac91JEHgAAAAAOgAAAAAIAACAAAABRcSsbLIX+GtU7JRo9epARiRPhtgntBrLNEnTJVBeGl4AAAADiEqzUAIoPsaEKiGoQ/iPEmlg+R7FAiWxzB+1HrREOBLW10qVv3Y+K3AoDwjnUWBTNcG1W9OBWGCFxGWBbm3/sqYm3K35exYCe6F3vG7DW/4NS9vFBqIkYE2r+ng1mhmJaUTPaIOcsNt7Hu9n3DvvjV70zcMF1bD67jxrbYIT0WkAAAAC5MuO9Y3y4FQ8l2bss0WihiXmJE8P4PehpO1WdW55OdMhDtGwDeTgt1VqQmG7XuzfmllVu9tTp6lf1Smegk6OG</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="CnnStr">
+      <Value>Server=tcp:modernstore.database.windows.net,1433%3bInitial Catalog=ModernStore%3bPersist Security Info=False%3bUser ID=modernstore%3bPassword=b%2aA4V7Lq%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
