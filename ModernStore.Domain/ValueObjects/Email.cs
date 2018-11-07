@@ -13,7 +13,7 @@ namespace ModernStore.Domain.ValueObjects
             
             AddNotifications(new Contract()
                 .Requires()
-                .IsEmail(EmailAddress, "EmailAddress", "E-mail inválido."));
+                .IsEmail(EmailAddress, "Email", "E-mail inválido."));
         }
 
         public string EmailAddress { get; private set; }

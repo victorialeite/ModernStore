@@ -11,9 +11,8 @@ namespace ModernStore.Domain.ValueObjects
         {
             Number = number;
 
-            AddNotifications(new Contract()
-                .HasLen(Number, 11, "Number", "O Cpf deve ter 11 caracteres")
-                .AreNotEquals(Validate(Number), false, "Number", "Cpf inválido."));
+            if (!Validate(number))
+                AddNotification("Document", "CPF inválido");
         }
 
         public string Number { get; private set; }
