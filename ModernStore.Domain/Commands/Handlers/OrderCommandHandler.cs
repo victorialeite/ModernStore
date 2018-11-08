@@ -40,7 +40,7 @@ namespace ModernStore.Domain.Commands.Handlers
             }
 
             // Adiciona as notificações do pedido no handler
-            AddNotifications(order);
+            AddNotifications(order, customer);
 
             // Persiste no banco
             if (Valid)

@@ -85,14 +85,11 @@ namespace ModernStore.Api
                 ClockSkew = TimeSpan.Zero
             };
 
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = tokenValidationParameters;
-            });
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = tokenValidationParameters;
+                });
 
             // Resolvendo as dependências
             services.AddScoped<ModernStoreDataContext, ModernStoreDataContext>();
@@ -119,6 +116,8 @@ namespace ModernStore.Api
                 x.AllowAnyOrigin();
             });
             app.UseMvc();
+
+            app.UseAuthentication();
 
             Runtime.ConnectionString = Configuration.GetConnectionString("CnnStr");
         }

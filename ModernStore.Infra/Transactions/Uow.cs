@@ -1,11 +1,12 @@
-﻿using ModernStore.Infra.DataContexts;
+﻿using ModernStore.Domain.Repositories;
+using ModernStore.Infra.DataContexts;
 
 namespace ModernStore.Infra.Transactions
 {
     public class Uow : IUow
     {
         private readonly ModernStoreDataContext _context;
-
+        
         public Uow(ModernStoreDataContext context)
         {
             _context = context;

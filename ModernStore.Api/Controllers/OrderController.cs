@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ModernStore.Domain.Commands.Handlers;
 using ModernStore.Domain.Commands.Inputs;
 using ModernStore.Infra.Transactions;
+using System.Threading.Tasks;
 
 namespace ModernStore.Api.Controllers
 {
@@ -20,6 +18,7 @@ namespace ModernStore.Api.Controllers
 
         [HttpPost]
         [Route("v1/orders")]
+        [AllowAnonymous]
         // FromBody: Informações vem do corpo e não da URL
         public async Task<IActionResult> Post([FromBody]RegisterOrderCommand command)
         {
